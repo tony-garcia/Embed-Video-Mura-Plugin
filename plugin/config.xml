@@ -1,0 +1,70 @@
+<plugin>
+<name>Embed Video Plugin</name>
+<!-- the package value becomes a part of the directory name where the plugin is installed. -->
+<package>EmbedVideo</package>
+<version>1.0.1</version>
+<provider>DreamLabs Media</provider>
+<providerURL>http://dreamlabsmedia.com</providerURL>
+<category>Tag</category>
+<settings>
+	<setting>
+		<name>isEnabled</name>
+		<label>Enable Embed Video Plugin</label>
+		<hint>Enable plugin.</hint>
+		<type>selectbox</type>
+		<required>true</required>
+		<validation></validation>
+		<regex></regex>
+		<message></message>
+		<defaultvalue>yes</defaultvalue>
+		<optionlist>yes^no</optionlist>
+		<optionlabellist>Yes^No</optionlabellist>
+	</setting>
+	<setting>
+		<name>defaultWidth</name>
+		<label>Default Video Width</label>
+		<hint>This will be used as the default movie width (in pixels) if the width is not specified for the movie.</hint>
+		<type>text</type>
+		<required>true</required>
+		<validation>numeric</validation>
+		<regex></regex>
+		<message>Please enter a numberic value for the Default Video Width.</message>
+		<defaultvalue>425</defaultvalue>
+		<optionlist></optionlist>
+		<optionlabellist></optionlabellist>
+	</setting>
+	<setting>
+		<name>defaultHeight</name>
+		<label>Default Video Height</label>
+		<hint>This will be used as the default movie height (in pixels) if the height is not specified for the movie.</hint>
+		<type>text</type>
+		<required>true</required>
+		<validation>numeric</validation>
+		<regex></regex>
+		<message>Please enter a numberic value for the Default Video Height.</message>
+		<defaultvalue>355</defaultvalue>
+		<optionlist></optionlist>
+		<optionlabellist></optionlabellist>
+	</setting>
+	<setting>
+		<name>displayRelated</name>
+		<label>Display Related Videos</label>
+		<hint>Indicate whether to display thumbnails of related videos after the video is over. Can be overriden within the EmbedVideo tag with the attribute rel:0 or 1 (YouTube videos only).</hint>
+		<type>selectbox</type>
+		<required>true</required>
+		<validation></validation>
+		<regex></regex>
+		<message></message>
+		<defaultvalue>0</defaultvalue>
+		<optionlist>0^1</optionlist>
+		<optionlabellist>No^Yes</optionlabellist>
+	</setting>
+</settings>
+
+<eventHandlers>
+	<eventHandler event="onRenderEnd" component="eventHandlers.EmbedVideo" persist="true"/>
+</eventHandlers>
+
+<displayobjects location="global">
+</displayobjects>
+</plugin>
