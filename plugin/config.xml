@@ -2,7 +2,7 @@
 <name>Embed Video Plugin</name>
 <!-- the package value becomes a part of the directory name where the plugin is installed. -->
 <package>EmbedVideo</package>
-<version>1.0.1</version>
+<version>1.0.2</version>
 <provider>DreamLabs Media</provider>
 <providerURL>http://dreamlabsmedia.com</providerURL>
 <category>Tag</category>

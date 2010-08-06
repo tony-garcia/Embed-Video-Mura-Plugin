@@ -120,6 +120,18 @@
 				</cfoutput>
 				</cfsavecontent>
 			</cfcase>
+			<cfcase value="liveleak">
+				<cfsavecontent variable="code">
+				<cfoutput>
+					<object width="#arguments.width#" height="#arguments.height#">
+						<param name="movie" value="http://www.liveleak.com/e/#arguments.videoid#" />
+						<param name="wmode" value="transparent" />
+						<param name="allowscriptaccess" value="always" />
+						<embed src="http://www.liveleak.com/e/#arguments.videoid#" type="application/x-shockwave-flash" wmode="transparent" allowscriptaccess="always" width="#arguments.width#" height="#arguments.height#" />
+					</object>
+				</cfoutput>
+				</cfsavecontent>
+			</cfcase>
 		</cfswitch>
 		<cfreturn code />
 	</cffunction>
